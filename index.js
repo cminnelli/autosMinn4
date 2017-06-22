@@ -142,9 +142,8 @@ app.post("/modificarEstado" , function(req , res){
 
 })
 
-	
 
-})
+
 
 	app.get("/comentarios" , function(req , res){
 		res.sendFile(path.join(__dirname , "mensajes.html"))
