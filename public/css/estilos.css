@@ -240,7 +240,7 @@ header {
     height: 100%; }
   .contacto .form-group {
     margin-bottom: 0; }
-  .contacto input, .contacto option, .contacto textarea, .contacto *::-webkit-input-placeholder, .contacto *::-webkit-input-select {
+  .contacto select, .contacto input, .contacto option, .contacto textarea, .contacto *::-webkit-input-placeholder, .contacto *::-webkit-input-select {
     color: black;
     font-size: 13px; }
   .contacto input {
@@ -251,7 +251,7 @@ header {
   .contacto h4 {
     font-size: 16px; }
   .contacto label {
-    color: whitesmoke;
+    color: teal;
     font-size: 16px; }
   .contacto .mapa {
     border-radius: 10px;
@@ -283,7 +283,7 @@ header {
       display: inline-block; }
     @media screen and (max-width: 500px) {
       .autos .autos-wrapper {
-        padding: none; } }
+        padding: 0px; } }
     .autos .autos-wrapper .autos-item {
       animation: fadeIn 1.5s;
       padding: 15px 10px;

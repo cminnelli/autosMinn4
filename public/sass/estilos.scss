@@ -272,7 +272,7 @@ header{
 	 	margin-bottom:0;
 	 }
 
-	input, option, textarea ,*::-webkit-input-placeholder , *::-webkit-input-select ,{
+	select,  input, option, textarea ,*::-webkit-input-placeholder , *::-webkit-input-select ,{
 		color:black;
 		font-size: 13px;
 	}
@@ -290,7 +290,7 @@ header{
 		font-size: 16px;
 	}
 	label{
-		color:whitesmoke;
+		color:teal;
 		font-size: 16px;
 	}
 
@@ -350,7 +350,7 @@ header{
 		padding:50px;
 		margin:0;
 		@media screen and (max-width:500px){
-			padding:none;
+			padding:0px;
 		}
 	
 				
