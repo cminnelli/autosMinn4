@@ -151,23 +151,20 @@ header{
 
 			height: auto;
 			margin-top:50px;
-			padding:40px;
+			padding:100px;
 				vertical-align: center;
 			@media screen and (max-width:800px){
 				padding:0px;
 			}
 			
 			h2{
-				font-size: 18px;
+				font-size: 17px;
 			}
 			p{
 				margin-bottom:15px;
-				height: auto;
 				height: 100px;
 				padding:5px 20px;
-				width: 90%;
-				margin:0 auto;
-				transition: 1s;
+ 				transition: 1s;
 				border-radius:5px;
 
 			}

@@ -157,20 +157,17 @@ header {
   .servicios .servicios-wrapper {
     height: auto;
     margin-top: 50px;
-    padding: 40px;
+    padding: 100px;
     vertical-align: center; }
     @media screen and (max-width: 800px) {
       .servicios .servicios-wrapper {
         padding: 0px; } }
     .servicios .servicios-wrapper h2 {
-      font-size: 18px; }
+      font-size: 17px; }
     .servicios .servicios-wrapper p {
       margin-bottom: 15px;
-      height: auto;
       height: 100px;
       padding: 5px 20px;
-      width: 90%;
-      margin: 0 auto;
       transition: 1s;
       border-radius: 5px; }
     .servicios .servicios-wrapper img {
