@@ -135,7 +135,7 @@ app.post("/modificarEstado" , function(req , res){
 		} else if (response === null){
 			res.send("No existe registro");
 		}else{
-			res.sendFile(path.join(__dirname , "Myadmin.html"))
+			res.sendFile(path.join(__dirname , "myadmin.html"))
 		}
 	})
 	
