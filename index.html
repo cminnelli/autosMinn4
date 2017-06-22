@@ -1,0 +1,369 @@
+<!DOCTYPE html >
+<html lang="es">
+<head>
+<title>Autos Minn 2017℗ </title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+
+<link href="//cdn.shopify.com/s/files/1/1775/8583/t/1/assets/startup-materialize.min.css?15442768042751423763" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link href='imagenes/icons/venta.png' rel='shortcut icon' type='image/png'>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="libs/materialize/css/materialize.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<script src="libs/jquery/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="libs/materialize/js/materialize.min.js"></script>
+<link rel="stylesheet" href="css/estilos.css">
+
+
+<!-- ANGULAR SCRIPTS -->
+<script src="/libs/angular/angular.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/controllers/main.js"></script>
+
+</head>
+
+	<body ng-init="getCars()" ng-app="myApp" ng-controller="mainController">
+
+ 
+
+	<header>
+		<div class="transparencia">
+			
+			
+			<nav class="n">
+			  <div class="nav-wrapper">
+			    <a href="startup-horizontal-half.html" class="brand-logo"><i class="icon-diamond"></i></a>
+			    <ul id="nav-mobile" class="ag hide-on-med-and-down">
+			       
+			      <li><a class="ancla" href="#autos">Autos en venta</a></li>
+			      <li><a  class="ancla"href="#contacto">Contactanos</a></li>
+			    </ul>
+
+			  </div>
+			</nav>
+
+			<div class="gn ai full-height">
+			  <div class="header-wrapper c valign-wrapper">
+			    <div class="d jt offset-s2 ci">
+			      <h1>AUTOS MINN</h1>
+			      <p id="subtitulo" class="dx">Av. Fleming 2106 - <strong>Martinez</strong></p>
+			      <button  href="#servicios" class="ancla read-more"><i class="icon-caret-down"></i></button>
+			    </div>
+			  </div>
+			  <div class="laptop-preview-sizer">
+			    
+	 
+			  </div>
+			</div>
+		</div>
+	</header>
+
+	<section class="servicios" id="servicios">
+
+
+
+		<div class="serv-header">
+			<h3 class="text-left">Nuestros servicios</h3>
+			<div class="estrella dos">
+			<span class="ion-cube"></span>
+			</div>
+		</div>
+
+
+		<div class="row servicios-wrapper ">
+
+
+
+			<div ng-repeat="servicio in servicios"  id="f1_container" class=" col-lg-3 col-md-6 col-xs-12">
+			<div id="f1_card" class="shadow">
+			  <div id="{{servicio.referencia- +'art'}}" class="front face">
+			   <img class="img-circle img-responsive"  src="{{servicio.imgUrl}}" alt="{{servicio.referencia}}">
+			   <h2> {{servicio.nombre}}</h2>
+			  </div>
+			  <div class="back face center">
+
+			  		<p>{{servicio.descripcion}}</p>
+					<button class="btn-service ancla color" id="btn-gest" ng-click="contacto(servicio.nombre)">INGRESAR</button>
+			  </div>
+			</div>
+			</div>
+
+	
+
+
+	</section> 
+
+
+	<div class="container-fluid">
+
+	<section class="autos" id="autos">
+	<h3>Autos en venta</h3>
+	<div class="estrella text-center">
+	<span class="ion-android-car"></span>
+	</div>
+
+
+
+	<div class="row autos-wrapper">
+
+	<div ng-repeat="auto in autos | orderBy:'fecha':true" class="autos-item col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+	<article id="auto-art">
+
+		<div class="auto-item-header">
+			<h3>{{auto.nombre}}</h3>
+		</div>
+		<div class="auto-item-img">
+
+		<div  class="carousel carousel-slider">
+		    <a ng-repeat="d in auto.imgUrl" class="carousel-item"><img class="materialboxed" src="{{'http://res.cloudinary.com/dr8t3qbki/image/upload/' + d.substring(0,6) +'-' +  $index + '.jpg'}}"></a>
+	  </div>
+	  	</div>
+	
+		<div class="auto-item-des">
+
+			<div class="descri">
+			<p> <span class="icon ion-cash"></span> Precio: <span class="detalle"><span class="badge"></span> {{auto.precio | currency:"$"}}</span></p>
+			</div>
+			<div class="descri">
+			<p> <span class="icon ion-calendar"></span> Año <span class="detalle"> {{auto.year}}</span></p>
+			</div>
+			<div class="descri">
+			<p> <span class="ion-flash"></span> Combustible <span class="detalle"> {{auto.combustible}}</span></p>
+			</div>
+			<div class="descri">
+			<p> <span class="icon ion-android-car"></span> Kilometros: <span class="detalle"> {{auto.km}}</span></p>
+			</div>
+
+
+
+			<script>
+				$(document).ready(function(){
+				    $('.carousel.carousel-slider').carousel({fullWidth: true});
+				      $('.collapsible').collapsible();
+				  });
+
+	      
+			</script>
+
+
+
+		</div>
+		
+		<button ng-click="seePhoto(auto)" data-toggle="modal" data-target="#myModal" class="btn-service color"> <span class="ion-camera"></span> ver más</button>
+		<button ng-click="consultar(auto)"  data-target="#contacto" class="btn-service color"> <span class="ion-paper-airplane"></span> consultar</button>
+
+		
+		
+
+
+		</article>                 
+	</div>   
+
+	</div>
+	</section>
+
+	
+
+	<section class="contacto" id="contacto">
+		<div class="transparencia">
+			<div class="container">
+				<h3>contacto</h3>
+				<div class="estrella text-center">
+				<span class="ion-android-contacts"></span>
+				</div>
+
+				<div class=" text-center col-xs-12 col-md-12">
+					<iframe id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3288.1159523184883!2d-58.52083958570052!3d-34.499944559519776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb0f835383669%3A0x9b7b9398197fc366!2sAv.+Sir+Alexander+Fleming+2106%2C+B1640CTN+Mart%C3%ADnez%2C+Buenos+Aires!5e0!3m2!1ses!2sar!4v1497131738066"  frameborder="0" style="border:0" allowfullscreen></iframe>
+					
+				</div>
+				<div class="contacto-wrapper col-xs-12 col-md-12"">
+				<form action="/newContactUser" method="post">
+					<h4>Dejanos tu mensaje!</h4>
+					<div class="col-md-6">
+						<div class=" col s12">
+						  <label> Consulta</label>
+						  <select name="tipoConsulta" class="tipoConsulta input-field">
+						    <option value="venta"> Venta de auto</option>
+						    <option value="compra">Cotizacion de mi auto</option>
+						    <option value="gestoria">Gestoría</option>
+						    <option value="otro">Otra consulta</option>
+						  </select>
+						</div>
+
+
+						<div class="form-group col-xs-12">
+							<label for="confirm" class="cols-sm-12 control-label">Auto</label>
+							<div class="cols-sm-10">
+								<div class="form-group">
+									<input type="text" class="form-control" name="auto" id="auto"  placeholder="Ingresa el auto"/>
+								</div>
+							</div>
+						</div>
+
+
+
+						<div class="form-group">
+							<label for="mensaje" class="cols-sm-2 control-label">Mensaje</label>
+							<div class="cols-sm-10">
+								<div class="form-group">
+									<textarea type="text" class="materialize-textarea" name="mensaje" id="mensaje"  placeholder="Ingresa tu mensaje" ></textarea>
+								</div>
+							</div>
+						</div>
+
+						
+					</div>
+
+
+										
+					<div class="col-md-6">
+						<div class="form-group col-xs-12">
+							<label for="confirm" class="cols-sm-12 control-label">Nombre</label>
+							<div class="cols-sm-10">
+								<div class="form-group">
+									<input type="text" class="form-control" name="usuario" id="usuario"  placeholder="Ingresa tu nombre"/>
+								</div>
+							</div>
+						</div>
+						<div class="form-group col-xs-12">
+							<label for="confirm" class="cols-sm-12 control-label">Mail</label>
+							<div class="cols-sm-10">
+								<div class="form-group">
+									<input required type="email" class="form-control" name="mail" id="email"  placeholder="Ingresa tu mail"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group col-xs-12">
+							<label for="telefono" class="cols-sm-12 control-label">Telefono</label>
+							<div class="cols-sm-10">
+								<div class="form-group">
+									<input required type="tel" class="form-control" name="telefono" id="telefono"  placeholder="Ingresa tu telefono"/>
+								</div>
+							</div>
+						</div>
+						
+						<input type="submit" class="text-center btn btn-default btn-lg btn-block login-button" value="Enviar">			
+					</div>
+					
+
+					</form>
+
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Modal -->
+	<div id="myModal" class="modal fade" >
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">{{viewAuto.nombre}}</h4>
+	      </div>
+	      <div class="modal-body">
+	      <article class="auto-art">
+
+	      	<div class="auto-item-header">
+	      		<h3>{{auto.nombre}}</h3>
+	      	</div>
+
+			<div class="autos">
+	      	<div class="auto-item-des">
+	      		<div class="descri">
+	      		<p> <span class="icon ion-cash"></span> Precio: <span class="detalle"> {{viewAuto.precio | currency:"$"}}</span></p>
+	      		</div>
+	      		<div class="descri">
+	      		<p> <span class="icon ion-calendar"></span> Año <span class="detalle"> {{viewAuto.year}}</span></p>
+	      		</div>
+	      		<div class="descri">
+	      		<p> <span class="icon ion-flash"></span> Combustible <span class="detalle"> {{viewAuto.combustible}}</span></p>
+	      		</div>
+	      		<div class="descri">
+	      		<p> <span class="icon ion-paintbucket"></span> Color <span class="detalle"> {{viewAuto.color}}</span></p>
+	      		</div>
+	      		<div class="descri">
+	      		<p> <span class="icon ion-android-car"></span> Kilometros: <span class="detalle"> {{viewAuto.km}}</span></p>
+	      		</div>
+
+	      	
+	      		<div class="descri caract">
+	      		<p> <span class="icon ion-navicon"></span> Caracteristicas: <span class="detalle"> {{viewAuto.caracteristicas}}</span></p>
+	      		</div>	
+
+	      		<div class="descri caract">
+	      		<p> <span class="icon ion-settings"></span> Comentarios: <span class="detalle"> {{viewAuto.comentarios}}</span></p>
+	      		</div>
+
+	      	</div>
+	      	</div>  
+	        <img ng-repeat="img in viewAuto.imgUrl" src="{{'http://res.cloudinary.com/dr8t3qbki/image/upload/' + img.substring(0,6) + '-' + $index + '.jpg'}}" alt="" class="img-responsive">
+	      </div>
+	      <div class="modal-footer">
+	        <button ng-click="closeModal()" type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+	      </div>
+	    </div>
+
+	  </div>
+	</div>
+	</div> 
+
+	<div id="footer-wrapper">
+		<footer>
+		<div class=" copyright shadow">
+			<div class="row">
+				<div class="direccion col-md-offset-2 col-md-4">
+					<p class="text-center"> <strong>Copyright 2017 Autos Minn</strong></p>
+					<p class="text-center">Avenida Fleming 2106 - Martinez (CP 1640), Buenos Aires, Argentina</p>
+				</div>
+
+				<div class="telefono col-md-4  ">
+					<p class="text-center"> <strong> <span class="ion-social-whatsapp-outline"></span>Cel: 116-095-8125 </strong></p>
+					<p class="text-center"> <strong> <span class="ion-ios-telephone-outline"></span>Tel: 47934559 </strong></p>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="design-contact">
+		<p class="text-center"> <a onclick="contactMe()"> Diseño por Brum Design ℗</a></p>                                                             
+		</div>
+
+		<script>
+		function contactMe(){
+		alert("Contacto Diseño y Programación web: cminnelli@gmail.com")
+		}
+		</script>
+
+		</footer>
+	</div>
+
+
+
+
+
+
+
+	
+
+		<!-- JQUERY AND BOOTSTRAP SCRIPTS -->
+
+
+		<!-- STICKY MOJO SCRIPTS -->
+		<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
+		<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
+
+	
+	</body>
+
+</html>

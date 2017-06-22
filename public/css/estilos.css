@@ -1,0 +1,495 @@
+/* CAMBIOS DE ESTILOS EN BOOTSTRAP*/
+@import "https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css";
+@import "https://fonts.googleapis.com/css?family=Dosis|Montserrat:400,700|Muli|Open+Sans:400,700|Playfair+Display|Raleway|Roboto:400,700";
+@import "https://fonts.googleapis.com/css?family=Lato|Open+Sans|Raleway|Roboto|Slabo+27px";
+@import "https://fonts.googleapis.com/css?family=Droid+Serif:400,700|Roboto+Slab";
+.jumbotron {
+  background: transparent;
+  color: white;
+  padding: 30px 5px;
+  z-index: 3; }
+  .jumbotron h1 {
+    padding-top: 70px;
+    color: white;
+    font-family: 'Roboto Slab', serif; }
+  .jumbotron p {
+    color: rgba(0, 0, 0, 0.3); }
+
+.boton-header {
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 0px; }
+
+.navbarown {
+  background: transparent;
+  border: none;
+  animation: bounceInLeft 1s; }
+  .navbarown img {
+    animation: rubberBand 1.5s; }
+
+.navbar-inverse .navbar-nav > li > a {
+  font-weight: 700;
+  font-size: 1em;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+  color: #ffc966;
+  letter-spacing: 0.8px;
+  font-family: 'Raleway', sans-serif; }
+  .navbar-inverse .navbar-nav > li > a.contacto-activo {
+    color: white; }
+
+.navbar-inverse .navbar-toggle .icon-bar {
+  background-color: black;
+  color: white; }
+
+nav > li > a:focus, .navbar-inverse .navbar-nav > li > a:hover {
+  color: whitesmoke;
+  border-bottom: 3px solid orange; }
+
+.home a {
+  border-bottom: 3px solid orange; }
+
+.thumbnail {
+  border-radius: 0; }
+
+.cont-contacto {
+  padding: 0; }
+
+.fieldset {
+  padding: 30px; }
+
+.container-fluid {
+  padding: 0; }
+
+/*
+
+font-family: 'Open Sans', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Muli', sans-serif;
+font-family: 'Dosis', sans-serif;
+font-family: 'Roboto', sans-serif;
+
+
+
+/* CAMBIO DE ESTILOS EN CLASES PROPIAS*/
+body, html {
+  height: 100%;
+  font-family: 'Roboto', sans-serif; }
+
+.titulos-seccion, .seccion-estructura h3, .servicios h3, .gestoria h3, .contacto h3, .autos > h3 {
+  font-size: 2.2em;
+  padding: 20px 0 5px 0;
+  margin: 0;
+  text-align: center;
+  font-weight: 700;
+  font-family: "Lato";
+  text-transform: uppercase;
+  color: #1ED2B2; }
+  @media screen and (max-width: 600px) {
+    .titulos-seccion, .seccion-estructura h3, .servicios h3, .gestoria h3, .contacto h3, .autos > h3 {
+      font-size: 22px; } }
+
+/*SECCION HEADER*/
+header {
+  background-attachment: fixed;
+  background-image: url("../imagenes/headerimg3.jpg");
+  height: 100%;
+  background-size: cover; }
+  header .transparencia {
+    background-color: rgba(100, 100, 151, 0.93);
+    height: 100%; }
+  header h1 {
+    font-size: 20px;
+    animation: 2s bounceInLeft;
+    animation-delay: 0.1s; }
+
+/*CSS FLECHA*/
+.flecha {
+  border: 6px solid #1ED2B2;
+  display: inline-block;
+  position: absolute;
+  border-radius: 50%;
+  font-size: 1.2em;
+  width: 50px;
+  height: 50px;
+  background: #2C393F;
+  bottom: 15px;
+  right: 15px;
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  z-index: 2; }
+  .flecha:hover {
+    background: #9f2623;
+    transition: 0.5s; }
+  .flecha a {
+    position: absolute;
+    color: white;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold; }
+    .flecha a span {
+      font-size: 1.8em; }
+
+.seccion-estructura, .servicios, .gestoria, .contacto {
+  background-repeat: no-repeat;
+  background-position: 100%; }
+  .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
+    padding: 5px;
+    background-color: rgba(100, 100, 151, 0.7); }
+    @media screen and (max-width: 1100px) {
+      .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
+        height: auto; } }
+
+/*SECCION SERVICIOS*/
+.servicios {
+  text-align: center;
+  color: white;
+  background: #2C393F; }
+  @media screen and (max-width: 1100px) {
+    .servicios {
+      height: auto; } }
+  .servicios .servicios-wrapper {
+    height: auto;
+    margin-top: 50px;
+    padding: 40px;
+    vertical-align: center; }
+    @media screen and (max-width: 800px) {
+      .servicios .servicios-wrapper {
+        padding: 0px; } }
+    .servicios .servicios-wrapper h2 {
+      font-size: 18px; }
+    .servicios .servicios-wrapper p {
+      margin-bottom: 15px;
+      height: auto;
+      height: 100px;
+      padding: 5px 20px;
+      width: 90%;
+      margin: 0 auto;
+      transition: 1s;
+      border-radius: 5px; }
+    .servicios .servicios-wrapper img {
+      display: inline-block;
+      height: 128px;
+      width: 128px;
+      opacity: 0.9;
+      text-align: center; }
+    .servicios .servicios-wrapper #f1_container {
+      position: relative;
+      height: 281px;
+      z-index: 1; }
+    .servicios .servicios-wrapper #f1_container {
+      perspective: 1000; }
+    .servicios .servicios-wrapper #f1_card {
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: all 1.0s linear; }
+    .servicios .servicios-wrapper #f1_container:hover #f1_card {
+      transform: rotateY(180deg); }
+    .servicios .servicios-wrapper .face {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden;
+      -o-backface-visibility: hidden;
+      -ms-backface-visibility: hidden; }
+    .servicios .servicios-wrapper .face.back {
+      display: block;
+      transform: rotateY(180deg);
+      box-sizing: border-box;
+      padding: 10px;
+      color: white;
+      text-align: center;
+      background-color: #2C393F; }
+
+.seccion-estructura, .servicios, .gestoria, .contacto {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: 100%; }
+  .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
+    background-color: rgba(120, 120, 151, 0.7);
+    height: 100vh;
+    padding: 30px; }
+    @media screen and (max-width: 1000px) {
+      .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
+        height: auto; } }
+
+/*SECCION GESTORIA*/
+.gestoria {
+  height: 100vh;
+  background: rgba(95, 255, 160, 0.9);
+  background-attachment: fixed; }
+  .gestoria h3 {
+    color: whitesmoke; }
+  @media screen and (max-width: 1000px) {
+    .gestoria {
+      height: auto; } }
+
+/*contacto*/
+.contacto {
+  height: 100vh;
+  margin-bottom: 10px;
+  background-attachment: fixed; }
+  .contacto .col-xs-12 {
+    margin-bottom: 0; }
+  .contacto iframe {
+    width: 100%;
+    height: 100%; }
+  .contacto .form-group {
+    margin-bottom: 0; }
+  .contacto input, .contacto option, .contacto textarea, .contacto *::-webkit-input-placeholder, .contacto *::-webkit-input-select {
+    color: black;
+    font-size: 13px; }
+  .contacto input {
+    margin-bottom: 1px;
+    padding: 2px; }
+  .contacto img {
+    border-radius: 25px; }
+  .contacto h4 {
+    font-size: 16px; }
+  .contacto label {
+    color: whitesmoke;
+    font-size: 16px; }
+  .contacto .mapa {
+    border-radius: 10px;
+    padding: 5px; }
+  .contacto .transparencia {
+    background-color: whitesmoke;
+    padding: 15px; }
+    .contacto .transparencia .info-item {
+      padding: 15px; }
+      .contacto .transparencia .info-item h4 {
+        font-size: 20px;
+        font-weight: 700; }
+      .contacto .transparencia .info-item h5 {
+        font-size: 17px; }
+  .contacto .form-group {
+    padding: 0;
+    padding: 5px; }
+
+/*SECCION AUTOS*/
+.autos {
+  padding: 30px 5px; }
+  .autos > h3 {
+    color: rgba(0, 0, 0, 0.7); }
+  .autos .autos-wrapper {
+    padding: 50px;
+    margin: 0; }
+    .autos .autos-wrapper button {
+      width: 48%;
+      display: inline-block; }
+    @media screen and (max-width: 500px) {
+      .autos .autos-wrapper {
+        padding: none; } }
+    .autos .autos-wrapper .autos-item {
+      animation: fadeIn 1.5s;
+      padding: 15px 10px;
+      box-sizing: border-box;
+      border-radius: 5px; }
+      .autos .autos-wrapper .autos-item article {
+        box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15), 0 5px 8px rgba(0, 0, 0, 0.12);
+        padding: 5px;
+        background: whitesmoke;
+        border-bottom: 1.5px solid #36474e;
+        border-radius: 5px; }
+        .autos .autos-wrapper .autos-item article .auto-item-header {
+          border-radius: 4px;
+          padding: 7px;
+          margin-bottom: 5px;
+          background: #36474e;
+          color: white;
+          text-align: center;
+          border-radius: 1.5px; }
+          .autos .autos-wrapper .autos-item article .auto-item-header h3 {
+            color: whitesmoke;
+            opacity: 0.5;
+            padding: 10px;
+            margin: 0;
+            font-weight: 700;
+            font-size: 1.2em; }
+          .autos .autos-wrapper .autos-item article .auto-item-header h4 {
+            padding: 0 10px;
+            margin: 0;
+            font-size: 1em;
+            font-weight: 700; }
+        .autos .autos-wrapper .autos-item article .auto-item-des {
+          padding: 5px;
+          text-align: left;
+          background: whitesmoke; }
+          .autos .autos-wrapper .autos-item article .auto-item-des .descri {
+            border-bottom: 1px solid #B8C1F2; }
+            .autos .autos-wrapper .autos-item article .auto-item-des .descri:hover {
+              background: gainsboro;
+              transition: 0.5s;
+              cursor: pointer; }
+              .autos .autos-wrapper .autos-item article .auto-item-des .descri:hover p {
+                color: grey; }
+            .autos .autos-wrapper .autos-item article .auto-item-des .descri p {
+              color: #5D5D5D;
+              padding: 3px;
+              margin: 0;
+              font-size: 1em; }
+              .autos .autos-wrapper .autos-item article .auto-item-des .descri p span {
+                color: #2C393F; }
+                .autos .autos-wrapper .autos-item article .auto-item-des .descri p span.icon {
+                  font-size: 1.3em;
+                  padding: 5px; }
+          .autos .autos-wrapper .autos-item article .auto-item-des .caract {
+            height: 100px; }
+        .autos .autos-wrapper .autos-item article .auto-item-img img {
+          border-radius: 4px;
+          width: 100%;
+          max-width: 650px; }
+
+/*SECCION FOOTER*/
+/* estrella before y after*/
+.estrella::after {
+  color: rgba(0, 0, 0, 0.7);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 5px 5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.estrella::before {
+  color: rgba(0, 0, 0, 0.7);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 5px 5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.estrella span {
+  font-size: 2.1em;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.estrella {
+  margin-bottom: 15px;
+  padding: 5px; }
+
+.estrella.dos span {
+  color: whitesmoke; }
+.estrella.dos::before {
+  background: whitesmoke; }
+.estrella.dos::after {
+  background: whitesmoke; }
+
+/*BOOTSTRAP CHANGES*/
+/*BOTONES*/
+.btn-service {
+  background: none;
+  padding: 8px 25px;
+  color: whitesmoke;
+  font-size: 15px;
+  border: 1px solid whitesmoke; }
+  .btn-service.color {
+    border: 1px solid #6c8a98;
+    color: #36474e;
+    margin: 5px 0px;
+    padding: 4px 10px;
+    background-color: whitesmoke;
+    border-radius: 5px;
+    font-size: 14px; }
+  .btn-service:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.9;
+    color: white; }
+
+#myModal {
+  background: none;
+  width: 100vw;
+  height: 100vh;
+  overflow: none;
+  border: none;
+  color: black; }
+  #myModal p {
+    color: black; }
+  #myModal .modal-content {
+    overflow-y: scroll; }
+
+/*ADMIN */
+.admin #adminHeader {
+  height: auto;
+  background-position: 100%; }
+@media screen and (max-width: 1000px) {
+  .admin {
+    background-position: 100%; } }
+.admin *::-webkit-input-placeholder, .admin *::-webkit-input-select, .admin select {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 13px; }
+.admin .form-group {
+  padding-left: 0;
+  margin-bottom: 8px; }
+.admin nav {
+  padding: 0px;
+  margin: 0px; }
+.admin h3 {
+  color: whitesmoke; }
+.admin form {
+  padding: 15px; }
+.admin .panel {
+  margin-bottom: 0;
+  background-color: transparent; }
+  .admin .panel label {
+    color: whitesmoke;
+    font-size: 15px;
+    letter-spacing: 1.5px; }
+.admin .ultimosAutos {
+  margin-top: 20px;
+  border-radius: 5px;
+  background-color: rgba(100, 100, 100, 0.3);
+  color: white;
+  overflow-y: scroll;
+  height: 600px; }
+  .admin .ultimosAutos img {
+    width: 50px; }
+  .admin .ultimosAutos .ultAuto-item {
+    border-bottom: 2px solid grey;
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+
+#footer-wrapper {
+  margin-top: 30px; }
+  #footer-wrapper .copyright {
+    height: 55%;
+    background-color: #3F4448;
+    color: whitesmoke;
+    font-weight: 350;
+    font-size: 15px;
+    box-shadow: 10px 10px 5px #888888;
+    padding: 18px; }
+    #footer-wrapper .copyright .phone, #footer-wrapper .copyright .direccion {
+      padding: 10px; }
+    #footer-wrapper .copyright p {
+      padding: 3px;
+      margin-bottom: 0; }
+      #footer-wrapper .copyright p span {
+        padding: 8px;
+        font-weight: 15px;
+        color: cornflowerblue; }
+      #footer-wrapper .copyright p:hover {
+        transition: 1s;
+        color: cornflowerblue;
+        transform: rotateY(360deg); }
+  #footer-wrapper .design-contact {
+    cursor: pointer;
+    height: 45%;
+    background-color: #24292E;
+    color: whitesmoke;
+    font-size: 15px;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.5); }
+    #footer-wrapper .design-contact p {
+      padding: 10px;
+      margin-bottom: 0; }
+
+/*# sourceMappingURL=estilos.css.map */

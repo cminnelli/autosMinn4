@@ -1,0 +1,40 @@
+{
+  "name": "autominn",
+  "version": "1.0.0",
+  "description": "compra y venta de autos",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "cloudinary": "^1.9.0",
+    "express": "^4.15.3",
+    "express-formidable": "^1.0.0",
+    "formidable": "^1.1.1",
+    "mongoose": "^4.10.2",
+    "multer": "^1.3.0",
+    "nodemailer": "^4.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cminnelli/autosminn2"
+  },
+  "engine": {
+    "node": "6.9.5"
+  },
+  "keywords": [
+    "auto",
+    "venta",
+    "compra",
+    "automoviles"
+  ],
+  "author": "charlie minnelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cminnelli/autosminn2/issues"
+  },
+  "homepage": "https://github.com/cminnelli/autosminn2#readme"
+}

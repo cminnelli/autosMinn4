@@ -1,0 +1,220 @@
+<!DOCTYPE html >
+<html lang="es">
+<head>
+<title>Panel de administración - copyright Autos Minn 2017 ℗ </title>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<script src="/libs/jquery/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href='imagenes/model-s.png' rel='shortcut icon' type='image/png'>
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/estilos.css">
+
+<script src="/libs/angular/angular.min.js"></script>
+<script src="/js/app.js"></script>
+<script src="/js/controllers/admin.js"></script>
+
+</head>
+
+<body class="admin" ng-init="getCars()" ng-app="myAdmin" ng-controller="adminController">
+	<header id="adminHeader">
+		<nav class="navbarown navbar navbar-inverse">
+
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="imagenes/logo.png" alt="logo"></a>
+			</div>
+
+
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+			<ul class="nav navbar-nav navbar-center">
+				<li><a href="/" class="home ancla"> Home</a></li>
+				<li><a href="/#servicios" class="ancla">Servicios</a></li>
+				<li><a class="ancla" href="/#autos">Autos en venta</a></li>
+				<li><a class="ancla li-gest" href="/#gestoria">Gestoría</a></li>
+				<li><a class="ancla contacto-activo" href="/comentarios">Base de Comentarios</a></li>							
+			</ul>
+			</div>
+
+		</nav>
+	
+	<div class="container">
+
+
+
+			<form class="panel col-xs-12  col-md-6" method="post" action="newCar" enctype="multipart/form-data">
+					<h3>Agregar nuevo auto</h3>					
+					<div class="form-group">
+					
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<input type="text" class="form-control" name="nombre" id="name"  placeholder="Ingresa el nombre"/>
+							</div>
+						</div>
+					</div>
+					
+					<div class="form-group col-xs-6">
+						<label for="email" class="cols-sm-2 control-label">Patente</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<input type="text" class="form-control" name="patente" id="patente"  placeholder="Ingresa la patente"/>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="form-group col-xs-6">
+						<label for="email" class="cols-sm-2 control-label">Marca</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<input type="text" class="form-control" name="marca" id="email"  placeholder="Ingresa la marca"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group col-xs-6">
+						<label for="username" class="cols-sm-2 control-label">Año</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<input type="text" class="form-control" name="year"  placeholder="Ingresa el año"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group col-xs-6">
+						<label for="password" class="cols-sm-2 control-label">Precio</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<input type="number" class="form-control" name="precio"  placeholder="Ingresa el precio en $"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group col-xs-4">
+						<label for="confirm" class="cols-sm-2 control-label">Kilometros</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<input type="number" class="form-control" name="km" id="confirm"  placeholder="Ingresa los Kilometros"/>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group col-xs-4">
+						<label for="confirm" class="cols-sm-2 control-label">Combustible</label>
+						<div class="cols-sm-10">
+									<select class="form-control" name="combustible">
+										<option>Nafta</option>
+										<option>Diesel</option>
+										<option>Gas</option>
+									</select>
+						</div>
+					</div>
+
+					<div class="form-group col-xs-4">
+						<label for="confirm" class="cols-sm-2 control-label">Color</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<input type="text" class="form-control" name="color" id="color"  placeholder="Ingresa el color"/>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="confirm" class="cols-sm-2 control-label">Caracteristicas</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<textarea type="text" class="form-control" name="caracteristicas" id="caracteristicas"  placeholder="Agregar caracteristicas generales" ></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="confirm" class="cols-sm-2 control-label">Comentarios</label>
+						<div class="cols-sm-10">
+							<div class="form-group">
+								<textarea type="text" class="form-control" name="comentarios" id="comentarios"  placeholder="Agregar comentario acerca el estado general del auto" ></textarea>
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="image1">Subir imagenes</label>
+						<input class="btn-service" multiple enctype="multipart/form-data" type="file" name="image1">
+
+					</div>
+
+					<input type="submit" class="btn btn-success btn-lg btn-block login-button" value="Nuevo Auto">
+					
+				</form>
+
+
+	
+
+			<div class="col-xs-12 col-md-3">
+				<form action="/eliminar" method="post">
+					<h3>Eliminar con patente</h3>
+					<div class="form-group">
+							<input type="text" class="form-control" name="patente"   placeholder="Nro de patente"/>
+					</div>
+					<input type="submit" class="btn btn-danger btn-lg btn-block login-button" value="Eliminar Auto">
+				</form>
+
+				<form action="/modificarEstado" method="post">
+					<h3>Cambiar precio de venta</h3>
+					<div class="form-group">
+							<input type="text" class="form-control" name="patente"   placeholder="Nro de patente"/>
+		
+					</div>
+					<div class="form-group">
+							<input type="number" class="form-control" name="precio"   placeholder="Modificar precio"/>
+					
+					</div>
+					
+
+					<input type="submit" class="btn btn-warning btn-lg btn-block login-button" value="Modificar">
+				</form>
+				
+			</div>
+
+
+
+			<div class="ultimosAutos col-sm-12 col-md-3">
+					<h3>ultimos agregados</h3>
+				<div class="ultimosItem" ng-repeat="auto in autos | orderBy:'time':true"">
+					<div class="media">
+					  <div class="media-left">
+	<!-- 				    <a href="#">
+					      <img class="media-object" src="{{'imagenes/autos/' + auto.imgUrl[0]}}" alt="{{auto.nombre}}">
+					    </a> -->
+					  </div>
+					  <div class="media-body">
+					    <h4 class="media-heading">{{auto.nombre}}</h4>
+					    <p>{{'patente:' + auto.patente}}</p>
+					    <p>{{'precio:' + auto.precio}}</p>
+					  </div>
+					</div>
+
+				</div>
+
+			</div>
+
+	</div>
+
+
+		<!-- STICKY MOJO SCRIPTS -->
+		<script type="text/javascript" src="/js/otros/stickyMojo.js"></script>
+		<script type="text/javascript" src="/js/otros/stickyConfig.js"></script>
+
+	
+	</body>
+
+</html>
