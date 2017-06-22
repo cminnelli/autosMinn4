@@ -138,6 +138,9 @@ app.post("/modificarEstado" , function(req , res){
 			res.sendFile(path.join(__dirname , "Myadmin.html"))
 		}
 	})
+	
+
+})
 
 	
 
