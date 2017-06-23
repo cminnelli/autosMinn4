@@ -15,17 +15,18 @@ $scope.seePhoto = function(obj){
 
 $scope.consultar  = function(auto){
 	$("#auto").val(auto.nombre);
-	$(".tipoConsulta").val('venta');
+	$("#tipoConsulta").val('venta');
 	window.location = "#contacto"
 }
 
-$scope.contacto = function(nombre){
+$scope.contacto = function(nombre , referencia){
+	alert(nombre + referencia)
 	if (nombre ==="Venta de autos"){
 	window.location = "/#autos"
 		
 	}else {
 		window.location = "/#contacto"
-		$("#tipoConsulta").val(nombre);
+		$("#tipoConsulta").val(referencia);
 	}
 }
 

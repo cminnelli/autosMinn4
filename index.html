@@ -50,7 +50,7 @@
 			<div class="gn ai full-height">
 			  <div class="header-wrapper c valign-wrapper">
 			    <div class="d jt offset-s2 ci">
-			      <h1>AUTOS MINN</h1>
+			      <h1> <span class="ion-android-car"></span> <br>AUTOS <span class="minn">  MINN </span></h1>
 			      <p id="subtitulo" class="dx">Av. Fleming 2106 - <strong>Martinez</strong></p>
 			      <button  href="#servicios" class="ancla read-more"><i class="icon-caret-down"></i></button>
 			    </div>
@@ -88,7 +88,7 @@
 			  <div class="back face center">
 
 			  		<p>{{servicio.descripcion}}</p>
-					<button class="btn-service ancla color" id="btn-gest" ng-click="contacto(servicio.nombre)">INGRESAR</button>
+					<button class="btn-service ancla color" id="btn-gest" ng-click="contacto(servicio.nombre, servicio.referencia)">INGRESAR</button>
 			  </div>
 			</div>
 			</div>
@@ -99,7 +99,7 @@
 	</section> 
 
 
-	<div class="container-fluid">
+
 
 	<section class="autos" id="autos">
 	<h3>Autos en venta</h3>
@@ -173,9 +173,9 @@
 	<section class="contacto" id="contacto">
 		<div class="transparencia">
 			<div class="container">
-				<h3>contacto</h3>
+				<h3>Ubicación</h3>
 				<div class="estrella text-center">
-				<span class="ion-android-contacts"></span>
+				<span class="ion-ios-location"></span>
 				</div>
 
 				<div class=" text-center col-xs-12 col-md-12">
@@ -184,11 +184,14 @@
 				</div>
 				<div class="contacto-wrapper col-xs-12 col-md-12"">
 				<form action="/newContactUser" method="post">
-					<h4>Dejanos tu mensaje!</h4>
+				<h3>Dejanos un mensaje!</h3>
+				<div class="estrella text-center">
+				<span class="ion-paper-airplane"></span>
+				</div>
 					<div class="col-md-6">
 						<div class=" col s12">
 						  <label> Consulta</label>
-						  <select name="tipoConsulta" class="tipoConsulta input-field">
+						  <select id="tipoConsulta" name="tipoConsulta" class="tipoConsulta input-field">
 						    <option value="venta"> Venta de auto</option>
 						    <option value="compra">Cotizacion de mi auto</option>
 						    <option value="gestoria">Gestoría</option>
@@ -219,8 +222,6 @@
 
 						
 					</div>
-
-
 										
 					<div class="col-md-6">
 						<div class="form-group col-xs-12">
@@ -248,8 +249,7 @@
 								</div>
 							</div>
 						</div>
-						
-						<input type="submit" class="text-center btn btn-default btn-lg btn-block login-button" value="Enviar">			
+		
 					</div>
 					
 
@@ -315,7 +315,7 @@
 
 	  </div>
 	</div>
-	</div> 
+
 
 	<div id="footer-wrapper">
 		<footer>

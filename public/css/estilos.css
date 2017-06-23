@@ -78,7 +78,11 @@ font-family: 'Roboto', sans-serif;
 /* CAMBIO DE ESTILOS EN CLASES PROPIAS*/
 body, html {
   height: 100%;
-  font-family: 'Roboto', sans-serif; }
+  font-family: 'Roboto', sans-serif;
+  background-color: whitesmoke;
+  box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4); }
 
 .titulos-seccion, .seccion-estructura h3, .servicios h3, .gestoria h3, .contacto h3, .autos > h3 {
   font-size: 2.2em;
@@ -88,7 +92,8 @@ body, html {
   font-weight: 700;
   font-family: "Lato";
   text-transform: uppercase;
-  color: #1ED2B2; }
+  color: #1ED2B2;
+  animation: fadeInTop 2s; }
   @media screen and (max-width: 600px) {
     .titulos-seccion, .seccion-estructura h3, .servicios h3, .gestoria h3, .contacto h3, .autos > h3 {
       font-size: 22px; } }
@@ -101,11 +106,31 @@ header {
   background-size: cover; }
   header .transparencia {
     background-color: rgba(100, 100, 151, 0.93);
-    height: 100%; }
+    height: 100%;
+    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6); }
   header h1 {
+    transition: 2s;
     font-size: 20px;
     animation: 2s bounceInLeft;
-    animation-delay: 0.1s; }
+    animation-delay: 0.09s;
+    cursor: pointer; }
+    header h1:hover {
+      transition: 1s;
+      color: #a3e9a4; }
+    @media screen and (max-width: 800px) {
+      header h1 {
+        font-size: 12px; } }
+  header .minn {
+    color: black;
+    letter-spacing: 5px; }
+  header .ion-caret-down:visited {
+    background-color: none; }
+  header #subtitulo {
+    animation: bounceInRight 2s;
+    animation-delay: 0.1s;
+    transition: 3s; }
 
 /*CSS FLECHA*/
 .flecha {
@@ -148,6 +173,7 @@ header {
 
 /*SECCION SERVICIOS*/
 .servicios {
+  padding: 10px;
   text-align: center;
   color: white;
   background: #2C393F; }
@@ -159,6 +185,8 @@ header {
     margin-top: 50px;
     padding: 100px;
     vertical-align: center; }
+    .servicios .servicios-wrapper.row {
+      margin-bottom: 0px; }
     @media screen and (max-width: 800px) {
       .servicios .servicios-wrapper {
         padding: 0px; } }
@@ -230,7 +258,6 @@ header {
 
 /*contacto*/
 .contacto {
-  height: 100vh;
   margin-bottom: 10px;
   background-attachment: fixed; }
   .contacto .col-xs-12 {
@@ -242,7 +269,9 @@ header {
     margin-bottom: 0; }
   .contacto select, .contacto input, .contacto option, .contacto textarea, .contacto *::-webkit-input-placeholder, .contacto *::-webkit-input-select {
     color: black;
-    font-size: 13px; }
+    font-size: 13px;
+    margin-bottom: 0px;
+    padding: 0px; }
   .contacto input {
     margin-bottom: 1px;
     padding: 2px; }
@@ -253,9 +282,6 @@ header {
   .contacto label {
     color: teal;
     font-size: 16px; }
-  .contacto .mapa {
-    border-radius: 10px;
-    padding: 5px; }
   .contacto .transparencia {
     background-color: whitesmoke;
     padding: 15px; }
@@ -272,6 +298,11 @@ header {
 
 /*SECCION AUTOS*/
 .autos {
+  background-color: aliceblue;
+  animation: fadeIn 0.5s;
+  box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
   padding: 30px 5px; }
   .autos > h3 {
     color: rgba(0, 0, 0, 0.7); }
@@ -285,7 +316,6 @@ header {
       .autos .autos-wrapper {
         padding: 0px; } }
     .autos .autos-wrapper .autos-item {
-      animation: fadeIn 1.5s;
       padding: 15px 10px;
       box-sizing: border-box;
       border-radius: 5px; }
@@ -342,46 +372,12 @@ header {
         .autos .autos-wrapper .autos-item article .auto-item-img img {
           border-radius: 4px;
           width: 100%;
-          max-width: 650px; }
+          max-width: 650px;
+          cursor: pointer; }
+          .autos .autos-wrapper .autos-item article .auto-item-img img:hover {
+            background-color: none; }
 
 /*SECCION FOOTER*/
-/* estrella before y after*/
-.estrella::after {
-  color: rgba(0, 0, 0, 0.7);
-  content: "";
-  display: inline-block;
-  height: 3px;
-  width: 60px;
-  background: rgba(0, 0, 0, 0.7);
-  margin: 5px 5px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-.estrella::before {
-  color: rgba(0, 0, 0, 0.7);
-  content: "";
-  display: inline-block;
-  height: 3px;
-  width: 60px;
-  background: rgba(0, 0, 0, 0.7);
-  margin: 5px 5px;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-.estrella span {
-  font-size: 2.1em;
-  color: rgba(0, 0, 0, 0.7);
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
-
-.estrella {
-  margin-bottom: 15px;
-  padding: 5px; }
-
-.estrella.dos span {
-  color: whitesmoke; }
-.estrella.dos::before {
-  background: whitesmoke; }
-.estrella.dos::after {
-  background: whitesmoke; }
-
 /*BOOTSTRAP CHANGES*/
 /*BOTONES*/
 .btn-service {
@@ -389,7 +385,8 @@ header {
   padding: 8px 25px;
   color: whitesmoke;
   font-size: 15px;
-  border: 1px solid whitesmoke; }
+  border: 1px solid whitesmoke;
+  transition: 1s; }
   .btn-service.color {
     border: 1px solid #6c8a98;
     color: #36474e;
@@ -400,20 +397,21 @@ header {
     font-size: 14px; }
   .btn-service:hover {
     background-color: rgba(0, 0, 0, 0.7);
-    transition: 0.9;
+    transition: 2s;
     color: white; }
 
-#myModal {
-  background: none;
-  width: 100vw;
-  height: 100vh;
-  overflow: none;
-  border: none;
+#myModal .autos {
+  background-color: white;
+  box-shadow: none; }
+#myModal p {
   color: black; }
-  #myModal p {
-    color: black; }
-  #myModal .modal-content {
-    overflow-y: scroll; }
+#myModal img {
+  padding: 17px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 6px; }
+  @media screen and (max-width: 800px) {
+    #myModal img {
+      padding: 3px; } }
 
 /*ADMIN */
 .admin #adminHeader {
@@ -458,6 +456,9 @@ header {
 #footer-wrapper {
   margin-top: 30px; }
   #footer-wrapper .copyright {
+    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
+    -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
+    -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
     height: 55%;
     background-color: #3F4448;
     color: whitesmoke;
@@ -476,8 +477,7 @@ header {
         color: cornflowerblue; }
       #footer-wrapper .copyright p:hover {
         transition: 1s;
-        color: cornflowerblue;
-        transform: rotateY(360deg); }
+        color: cornflowerblue; }
   #footer-wrapper .design-contact {
     cursor: pointer;
     height: 45%;
@@ -488,5 +488,42 @@ header {
     #footer-wrapper .design-contact p {
       padding: 10px;
       margin-bottom: 0; }
+
+/* estrella before y after*/
+.estrella::after {
+  color: rgba(0, 0, 0, 0.7);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 5px 5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.estrella::before {
+  color: rgba(0, 0, 0, 0.7);
+  content: "";
+  display: inline-block;
+  height: 3px;
+  width: 60px;
+  background: rgba(0, 0, 0, 0.7);
+  margin: 5px 5px;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.estrella span {
+  font-size: 2.1em;
+  color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+.estrella {
+  margin-bottom: 15px;
+  padding: 5px; }
+
+.estrella.dos span {
+  color: whitesmoke; }
+.estrella.dos::before {
+  background: whitesmoke; }
+.estrella.dos::after {
+  background: whitesmoke; }
 
 /*# sourceMappingURL=estilos.css.map */
