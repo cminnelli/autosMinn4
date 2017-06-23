@@ -239,7 +239,6 @@ header {
   background-position: 100%; }
   .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
     background-color: rgba(120, 120, 151, 0.7);
-    height: 100vh;
     padding: 30px; }
     @media screen and (max-width: 1000px) {
       .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
@@ -359,9 +358,9 @@ header {
                 color: grey; }
             .autos .autos-wrapper .autos-item article .auto-item-des .descri p {
               color: #5D5D5D;
-              padding: 3px;
+              padding: 5px;
               margin: 0;
-              font-size: 1em; }
+              font-size: 1.08em; }
               .autos .autos-wrapper .autos-item article .auto-item-des .descri p span {
                 color: #2C393F; }
                 .autos .autos-wrapper .autos-item article .auto-item-des .descri p span.icon {

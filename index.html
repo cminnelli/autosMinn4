@@ -131,10 +131,10 @@
 			<p> <span class="icon ion-cash"></span> Precio: <span class="detalle"><span class="badge"></span> {{auto.precio | currency:"$"}}</span></p>
 			</div>
 			<div class="descri">
-			<p> <span class="icon ion-calendar"></span> Año <span class="detalle"> {{auto.year}}</span></p>
+			<p> <span class="icon ion-calendar"></span> Año: <span class="detalle"> {{auto.year}}</span></p>
 			</div>
 			<div class="descri">
-			<p> <span class="ion-flash"></span> Combustible <span class="detalle"> {{auto.combustible}}</span></p>
+			<p> <span class="ion-flash"></span> Combustible: <span class="detalle"> {{auto.combustible}}</span></p>
 			</div>
 			<div class="descri">
 			<p> <span class="icon ion-android-car"></span> Kilometros: <span class="detalle"> {{auto.km}}</span></p>
@@ -189,16 +189,15 @@
 				<span class="ion-paper-airplane"></span>
 				</div>
 					<div class="col-md-6">
-						<div class=" col s12">
-						  <label> Consulta</label>
-						  <select id="tipoConsulta" name="tipoConsulta" class="tipoConsulta input-field">
-						    <option value="venta"> Venta de auto</option>
-						    <option value="compra">Cotizacion de mi auto</option>
-						    <option value="gestoria">Gestoría</option>
-						    <option value="otro">Otra consulta</option>
-						  </select>
+	
+						<div class="form-group col-xs-12">
+							<label for="confirm" class="cols-sm-12 control-label">Consulta</label>
+							<div class="cols-sm-10">
+								<div class="form-group">
+									<input type="text" class="form-control" name="tipoConsulta" id="tipoConsulta"  placeholder="Asunto de consulta"/>
+								</div>
+							</div>
 						</div>
-
 
 						<div class="form-group col-xs-12">
 							<label for="confirm" class="cols-sm-12 control-label">Auto</label>
@@ -249,6 +248,7 @@
 								</div>
 							</div>
 						</div>
+						<input type="submit" class="btn btn-default btn-lg btn-block login-button" value="Enviar">	
 		
 					</div>
 					
@@ -280,19 +280,19 @@
 			<div class="autos">
 	      	<div class="auto-item-des">
 	      		<div class="descri">
-	      		<p> <span class="icon ion-cash"></span> Precio: <span class="detalle"> {{viewAuto.precio | currency:"$"}}</span></p>
+	      		<p> <span class="icon ion-cash"></span>Precio: <span class="detalle"> {{viewAuto.precio | currency:"$"}}</span></p>
 	      		</div>
 	      		<div class="descri">
-	      		<p> <span class="icon ion-calendar"></span> Año <span class="detalle"> {{viewAuto.year}}</span></p>
+	      		<p><span class="icon ion-calendar"></span>Año: <span class="detalle"> {{viewAuto.year}}</span></p>
 	      		</div>
 	      		<div class="descri">
-	      		<p> <span class="icon ion-flash"></span> Combustible <span class="detalle"> {{viewAuto.combustible}}</span></p>
+	      		<p><span class="icon ion-flash"></span>Combustible" <span class="detalle"> {{viewAuto.combustible}}</span></p>
 	      		</div>
 	      		<div class="descri">
-	      		<p> <span class="icon ion-paintbucket"></span> Color <span class="detalle"> {{viewAuto.color}}</span></p>
+	      		<p><span class="icon ion-paintbucket"></span>Color: <span class="detalle"> {{viewAuto.color}}</span></p>
 	      		</div>
 	      		<div class="descri">
-	      		<p> <span class="icon ion-android-car"></span> Kilometros: <span class="detalle"> {{viewAuto.km}}</span></p>
+	      		<p><span class="icon ion-android-car"></span>Kilometros: <span class="detalle"> {{viewAuto.km}}</span></p>
 	      		</div>
 
 	      	

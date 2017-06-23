@@ -263,8 +263,7 @@ header{
 	background-position:100%;
 	.transparencia{
 
-		background-color:rgba(120, 120, 151,0.7);
-		height: 100vh;
+		background-color:rgba(120, 120, 151,0.7);		
 		@media screen and (max-width:1000px){
 			height: auto;
 		}
@@ -446,9 +445,9 @@ header{
 						}
 						p{
 							color:#5D5D5D;
-							padding:3px;
+							padding:5px;
 							margin:0;
-							font-size: 1em;
+							font-size: 1.08em;
 								
 							span{
 								&.icon{
