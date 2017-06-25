@@ -420,11 +420,16 @@ header.index {
 /*ADMIN */
 .admin {
   height: auto; }
-  .admin .collection {
+  @media screen and (max-width: 100px) {
+    .admin input {
+      disabled: false; } }
+  .admin background-color:rgba(0,0,0,0.7)
+  .ultimosAutos .collection {
     border: none;
-    height: 100vh;
-    overflow: scroll; }
-    .admin .collection li {
+    height: 400px;
+    overflow-y: scroll; }
+    .admin background-color:rgba(0,0,0,0.7)
+    .ultimosAutos .collection li {
       background-color: transparent;
       border: none; }
   .admin .equipamiento {
@@ -510,14 +515,36 @@ form {
       margin-bottom: 0; }
 
 .login {
-  background-color: teal;
-  padding: 80px; }
-  .login span {
+  background-image: linear-gradient(10deg, #8ddad5 0, #00cdac 100%);
+  position: relative;
+  text-align: center; }
+  .login .loginHeader {
+    background-color: rgba(0, 20, 0, 0.2);
+    padding: 15px;
+    border-radius: 5px;
     color: whitesmoke; }
-  .login input {
-    margin-top: 20px;
-    text-align: center;
-    letter-spacing: 1px; }
+    .login .loginHeader span {
+      font-size: 50px;
+      color: rgba(0, 0, 0, 0.8); }
+  .login .loginWrapper {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30%;
+    transform: translate(-50%, -50%); }
+    @media screen and (max-width: 800px) {
+      .login .loginWrapper {
+        width: 90%; } }
+    .login .loginWrapper i {
+      color: whitesmoke; }
+    .login .loginWrapper input {
+      margin-top: 20px;
+      font-size: 18px;
+      letter-spacing: 1px; }
+    .login .loginWrapper form {
+      padding: 10px; }
 
 /* estrella before y after*/
 .estrella::after {

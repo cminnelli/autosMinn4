@@ -11,10 +11,10 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link href='imagenes/model-s.png' rel='shortcut icon' type='image/png'>
+<link href='imagenes/icons/venta.png' rel='shortcut icon' type='image/png'>
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/estilos.css">
-<link rel="stylesheet" href="libs/materialize/css/materialize.min.css">
+<link rel="stylesheet" href="libs/materialize/css/materialize.css">
 <script src="libs/materialize/js/materialize.min.js"></script>
 
 <script src="/libs/angular/angular.min.js"></script>
@@ -120,7 +120,7 @@
 					
 					<label for="equipamiento">Elegir Equipamiento</label>
 					<div class="equipamiento col-xs-12">
-						<div ng-repeat="x in equipamiento" class="col-xs-6">
+						<div ng-repeat="x in equipamiento" class="col-sm-12 col-md-6">
 							<p>
 							   <input name="equipamiento" value="{{x}}" class="equipamiento" type="checkbox" id="{{test + $index}}" />
 							   <label for="{{test + $index}}">{{x}}</label>

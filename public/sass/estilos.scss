@@ -548,14 +548,24 @@ header.index{
 /*ADMIN */
 
 .admin{
-	.collection{
-		border:none;
-		height: 100vh;
-		overflow: scroll;
-		li{
-			background-color:transparent;
+	@media screen and (max-width:100px){
+input{
+	disabled:false;
+}
+	}
+
+	background-color:rgba(0,0,0,0.7)
+	.ultimosAutos{
+		.collection{
 			border:none;
+			height: 400px;
+			overflow-y: scroll;
+			li{
+				background-color:transparent;
+				border:none;
+			}
 		}
+		
 	}
 	.equipamiento{
 		padding:5px;
@@ -676,15 +686,44 @@ header.index{
 
 
 .login{
-	background-color:teal;
-	padding:80px;
-	span{
+	background-image:linear-gradient(10deg,#8ddad5 0,#00cdac 100%);
+	position:relative;
+	text-align:center;
+	.loginHeader{
+		background-color:rgba(0,20,0,0.2);
+		padding:15px;
+		border-radius:5px;
 		color:whitesmoke;
+		span{
+			font-size: 50px;
+			color:rgba(0,0,0,0.8);
+		}
 	}
-	input{
-		margin-top: 20px;
-		text-align: center;
-		letter-spacing: 1px;
+	.loginWrapper{
+		border-radius:5px;
+		background-color:rgba(0,0,0,0.4);
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 30%;
+		@media screen and (max-width:800px){
+			width: 90%;
+		}
+		transform: translate(-50%,-50%);
+	
+		i{
+			color:whitesmoke;
+		}
+		input{
+			margin-top: 20px;
+			font-size: 18px;
+			letter-spacing: 1px;
+		}
+		form{
+		padding:10px;
+
+		}
+		
 	}
 }
 
