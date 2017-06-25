@@ -20,13 +20,12 @@ font-family: 'Roboto', sans-serif;
 $fuente-parrafo:"Lato";
 $fuente-titulos:"Lato";
 $fuente-subtitulos:'Lato', sans-serif;
+$color-transparencia: rgba(100, 100, 151,0.93);
+$color-contact:#1ED2B2;
 $color-success:#449d44;
-$color-danger:#c9302c;
-$color-danger-hover:rgba(201,48,44,0.3);
-$color-lightblack:rgba(0.2,0.3,0.2,0.7);
-$color-general:#2C393F;
-$color-background-auto:lighten(#D32F2F,30%);
-$color-parrafo:rgba(0,0,0,0.4);
+$color-titulos:rgba(0.2,0.3,0.2,0.7);
+$color-general:#273547;
+
 
 
 
@@ -50,7 +49,7 @@ box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
 	font-weight:700;
 	font-family:$fuente-titulos;
 	text-transform:uppercase;
-	color:#1ED2B2;
+	color:$color-contact;
 	animation:fadeInTop 2s;
 	@media screen and (max-width:600px){
 		font-size: 22px;
@@ -59,13 +58,15 @@ box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
 }
 /*SECCION HEADER*/
 
-header{
+
+
+header.index{
 	background-attachment: fixed;
 	background-image:url("../imagenes/headerimg3.jpg");
 	height: 100%;
 	background-size:cover;
 	.transparencia{
-		background-color:rgba(100, 100, 151,0.93);
+		background-color:$color-transparencia;
 		height: 100%;
 		box-shadow:inset 0px 0px 120px rgba(0,0,0,0.6);
 		-webkit-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.6);
@@ -112,7 +113,7 @@ header{
 
 .flecha{
 	
-	border:6px solid #1ED2B2;
+	border:6px solid $color-contact;
 	display: inline-block;
 	position: absolute;
 	border-radius: 50%;
@@ -127,7 +128,7 @@ header{
 	transform: translate(-50%,0);
 	z-index:2;
 	&:hover{
-		background: darken($color-danger,10%);
+		background: darken(red,10%);
 		transition: 0.5s;
 	}
 		a{
@@ -151,7 +152,7 @@ header{
 		background-position:100%;
 		.transparencia{
 			padding:5px;
-			background-color:rgba(100, 100, 151,0.7);
+			background-color:$color-transparencia;
 			@media screen and (max-width:1100px){
 			height: auto;
 			}			
@@ -245,7 +246,7 @@ header{
 			  padding: 10px;
 			  color: white;
 			  text-align: center;
-			  background-color: #2C393F;
+			  background-color: $color-general;
 			}
 		
 
@@ -305,15 +306,15 @@ header{
 	 	margin-bottom:0;
 	 }
 
-	select,  input, option, textarea ,*::-webkit-input-placeholder , *::-webkit-input-select ,{
+	.input-field , select,  input, option, textarea ,*::-webkit-input-placeholder , *::-webkit-input-select ,{
 		color:black;
 		font-size: 13px;
-		margin-bottom:0px;
+		margin-top:8px;
 		padding:0px;
+		padding-bottom:0px;
 	}
 	input{
-		margin-bottom:1px;
-		padding:2px;
+			padding:2px;
 		&#telefono{
 	
 		}
@@ -348,11 +349,7 @@ header{
 
 		}
 	}
-	.form-group{
-		padding:0;
-		padding:5px;
 
-	}
 
 	
 }
@@ -371,7 +368,7 @@ header{
 	padding:30px 5px;
 		&>h3{
 		@extend .titulos-seccion;
-		color:$color-lightblack
+		color:$color-titulos;
 		}	
 	.autos-wrapper{
 		
@@ -412,7 +409,8 @@ header{
 					text-align: center;
 					border-radius:1.5px;
 					h3{
-						color:whitesmoke;
+						color:#a4bbd7;
+						text-transform: uppercase;
 						opacity:0.5;
 						padding:10px;
 						margin:0;
@@ -424,6 +422,16 @@ header{
 						margin:0;
 						font-size: 1em;
 						font-weight: 700;
+					}
+					&:hover{
+						background-color:lighten(#a4bbd7 ,1%);
+						cursor:pointer;
+						border-radius:5px;
+						transition: 1s;
+						h3{
+							transition: 1s;
+							color:$color-titulos;
+						}
 					}
 
 				}
@@ -440,7 +448,7 @@ header{
 							transition: 0.5s;
 							cursor:pointer;
 							p{
-								color:grey;
+								color:#a4bbd7;
 							}
 						}
 						p{
@@ -489,9 +497,6 @@ header{
 }
 
 
-/*SECCION FOOTER*/
-
-
 
 
 
@@ -515,43 +520,80 @@ header{
 		font-size: 14px;
 	}
 	&:hover{
-		background-color:$color-lightblack;
+		background-color:$color-titulos;
 		transition: 2s;
 		color:white;
 	}
 }
 
 #myModal{
-	.autos{
-		background-color: white;
-		box-shadow:none;
-	}
+
 	p{
 		color:black;
 	}
 	img{
 		padding:17px;
 		box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-		margin-bottom: 6px;
+		margin-bottom: 10px;
 		@media screen and (max-width:800px){
-			padding:3px;
+			padding:5px;
 		}
+	}
+	.autos{
+		background-color: white;
+		box-shadow:none;
 	}
 }
 
 /*ADMIN */
 
 .admin{
-	#adminHeader{
+	.collection{
+		border:none;
+		height: 100vh;
+		overflow: scroll;
+		li{
+			background-color:transparent;
+			border:none;
+		}
+	}
+	.equipamiento{
+		padding:5px;
+		margin-bottom:10px;
+
+		label{
+			font-weight: 300;
+			font-size:14px;
+		}
+		input.btn{
+			margin:12px 0;
+		}
+	}
+
+	.btn-eliminar{
+		background-color:crimson;
+	}
+
+	.btn-modificar{
+		background-color:orange;
+	}
+
+	.ultimosAutos{
+		span{
+			font-weight: 700;
+			line-height: 1px;
+			letter-spacing: 0.5px;
+		}
+	}
+
 	height: auto;
-	background-position:100%;
 	}
 	@media screen and (max-width:1000px){
 		background-position: 100%;
 	}
 	*::-webkit-input-placeholder , *::-webkit-input-select , select{
-	color:$color-lightblack;
-	font-size:13px;
+	color:$color-titulos;
+	font-size:14px;
 	}
 	.form-group{
 		padding-left:0;
@@ -562,7 +604,7 @@ header{
 		margin:0px;
 	}
 	h3{
-		color:whitesmoke;
+		color:$color-general;
 	}
 
 	form{
@@ -571,38 +613,25 @@ header{
 	.panel{
 
 		label{
-			color:whitesmoke;
-			font-size: 15px;
-			letter-spacing: 1.5px;
+			padding:2px;
+			color:$color-general;
+			font-size: 13px;
+			letter-spacing: 1px;
 		}
 		margin-bottom:0;
 		background-color:transparent;
 	}
 		
-	.ultimosAutos{
-		img{
-			width: 50px;
-		}
-		margin-top:20px;
-		border-radius:5px;
-		background-color:rgba(100,100,100,0.3);
-		color:white;
-		overflow-y: scroll;
-		height: 600px;
-		.ultAuto-item{
-			border-bottom:2px solid grey;
-			box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
-			}
-	}
 
-}
+
+
 
 #footer-wrapper{
 	margin-top:30px;
 	.copyright{
-		box-shadow:inset 0px 0px 120px rgba(0,0,0,0.6);
-	-webkit-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.6);
-	-moz-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.6);
+		box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+	-webkit-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
+	-moz-box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
 
 	height: 55%;
 	background-color:#3F4448;
@@ -646,27 +675,40 @@ header{
 }
 
 
+.login{
+	background-color:teal;
+	padding:80px;
+	span{
+		color:whitesmoke;
+	}
+	input{
+		margin-top: 20px;
+		text-align: center;
+		letter-spacing: 1px;
+	}
+}
+
 /* estrella before y after*/
 
 		.estrella::after {
-			color:$color-lightblack;
+			color:$color-titulos;
 			content: "";
 			display: inline-block;
 			height: 3px;
 			width: 60px;
-			background: $color-lightblack;
+			background: $color-titulos;
 			margin: 5px 5px;
 			text-shadow: 0 1px 3px rgba(0,0,0,.5);
 
 		}
 
 		.estrella::before {
-			color:$color-lightblack;
+			color:$color-titulos;
 			content: "";
 			display: inline-block;
 			height: 3px;
 			width: 60px;
-			background: $color-lightblack;
+			background: $color-titulos;
 			margin: 5px 5px;
 			text-shadow: 0 1px 3px rgba(0,0,0,.5);
 			
@@ -674,7 +716,7 @@ header{
 
 		.estrella span{ 
 			font-size: 2.1em;
-			color:darken($color-lightblack,20%);
+			color:darken($color-titulos,20%);
 			text-shadow: 0 1px 3px rgba(0,0,0,.5);
 
 		}

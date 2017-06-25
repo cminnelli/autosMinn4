@@ -59,6 +59,26 @@ app.get("/admin" , function(req,res){
 	res.sendFile((path.join(__dirname ,"myadmin.html")));
 })
 
+app.post("/log" , function(req,res){
+	var userLog = req.body.user;
+	var userPass = req.body.password;
+
+	var users = [{user:"cminnelli" , pass:"880min.." , imgUrl:"daniimg" }, {user:"dminnelli" , pass:"880min.." , imgUr:"daniimg" } , {user:"gminnelli" , pass:"880min.." , imgUrl:"daniimg" }]
+
+	var searchUser = users.find(function(item){
+	return 	item.user === userLog && item.pass === userPass ;
+	})
+
+		if (searchUser){
+			res.redirect("/admin" );
+		}else{
+			res.send("no existis")
+		}
+
+})
+
+
+
 app.post("/newContactUser" , function(req , res){
 	var newUser = new usuarios({
 		tipoConsulta:req.body.tipoConsulta,
@@ -113,7 +133,7 @@ app.post("/newCar", upload.any(), function(req,res){
 
 app.post("/eliminar" , function(req , res){
 	var pat = req.body.patente;
-	autos.findOneAndRemove({patente:pat}, function(err, response){
+	autos.remove({patente:pat}, function(err, response){
 		if (err){
 			throw err;
 		} else if (response === null){
@@ -148,6 +168,11 @@ app.post("/modificarEstado" , function(req , res){
 	app.get("/comentarios" , function(req , res){
 		res.sendFile(path.join(__dirname , "mensajes.html"))
 	})
+
+		app.get("/login" , function(req , res){
+		res.sendFile(path.join(__dirname , "login.html"))
+	})
+
 
 	app.get("/mensajes" , function(req , res){
 		usuarios.find({}, function(err , us){

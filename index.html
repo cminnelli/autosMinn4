@@ -31,7 +31,7 @@
 
  
 
-	<header>
+	<header class="index">
 		<div class="transparencia">
 			
 			
@@ -121,23 +121,23 @@
 		<div class="auto-item-img">
 
 		<div  class="carousel carousel-slider">
-		    <a ng-repeat="d in auto.imgUrl" class="carousel-item"><img class="materialboxed" src="{{'http://res.cloudinary.com/dr8t3qbki/image/upload/' + d.substring(0,6) +'-' +  $index + '.jpg'}}"></a>
+		    <a ng-repeat="d in auto.imgUrl" class="carousel-item"><img class="materialboxed" src="{{'http://res.cloudinary.com/dr8t3qbki/image/upload/h_519,w_778/' + d.substring(0,6) +'-' +  $index + '.jpg'}}"></a>
 	  </div>
 	  	</div>
 	
 		<div class="auto-item-des">
 
 			<div class="descri">
-			<p> <span class="icon ion-cash"></span> Precio: <span class="detalle"><span class="badge"></span> {{auto.precio | currency:"$"}}</span></p>
+			<p> <span class="icon ion-pricetag"></span> Precio: <span class="detalle"><span class="badge"></span> {{auto.precio | currency:"$"}}</span></p>
 			</div>
 			<div class="descri">
 			<p> <span class="icon ion-calendar"></span> Año: <span class="detalle"> {{auto.year}}</span></p>
 			</div>
 			<div class="descri">
-			<p> <span class="ion-flash"></span> Combustible: <span class="detalle"> {{auto.combustible}}</span></p>
+			<p> <span class="icon ion-fireball"></span> Combustible: <span class="detalle"> {{auto.combustible}}</span></p>
 			</div>
 			<div class="descri">
-			<p> <span class="icon ion-android-car"></span> Kilometros: <span class="detalle"> {{auto.km}}</span></p>
+			<p> <span class="icon ion-clock"></span> Kilometros: <span class="detalle"> {{auto.km}}</span></p>
 			</div>
 
 
@@ -280,19 +280,19 @@
 			<div class="autos">
 	      	<div class="auto-item-des">
 	      		<div class="descri">
-	      		<p> <span class="icon ion-cash"></span>Precio: <span class="detalle"> {{viewAuto.precio | currency:"$"}}</span></p>
+	      		<p> <span class="icon ion-pricetag"></span>Precio: <span class="detalle"> {{viewAuto.precio | currency:"$"}}</span></p>
 	      		</div>
 	      		<div class="descri">
 	      		<p><span class="icon ion-calendar"></span>Año: <span class="detalle"> {{viewAuto.year}}</span></p>
 	      		</div>
 	      		<div class="descri">
-	      		<p><span class="icon ion-flash"></span>Combustible" <span class="detalle"> {{viewAuto.combustible}}</span></p>
+	      		<p> 	<span class="icon ion-fireball"></span>Combustible: <span class="detalle"> {{viewAuto.combustible}}</span></p>
 	      		</div>
 	      		<div class="descri">
 	      		<p><span class="icon ion-paintbucket"></span>Color: <span class="detalle"> {{viewAuto.color}}</span></p>
 	      		</div>
 	      		<div class="descri">
-	      		<p><span class="icon ion-android-car"></span>Kilometros: <span class="detalle"> {{viewAuto.km}}</span></p>
+	      		<p><span class="icon ion-clock"></span>Kilometros: <span class="detalle"> {{viewAuto.km}}</span></p>
 	      		</div>
 
 	      	

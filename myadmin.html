@@ -14,6 +14,8 @@
 <link href='imagenes/model-s.png' rel='shortcut icon' type='image/png'>
 <link rel="stylesheet" href="css/animate.css">
 <link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="libs/materialize/css/materialize.min.css">
+<script src="libs/materialize/js/materialize.min.js"></script>
 
 <script src="/libs/angular/angular.min.js"></script>
 <script src="/js/app.js"></script>
@@ -22,39 +24,14 @@
 </head>
 
 <body class="admin" ng-init="getCars()" ng-app="myAdmin" ng-controller="adminController">
-	<header id="adminHeader">
-		<nav class="navbarown navbar navbar-inverse">
+	<header>
 
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"><img src="imagenes/logo.png" alt="logo"></a>
-			</div>
-
-
-			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-			<ul class="nav navbar-nav navbar-center">
-				<li><a href="/" class="home ancla"> Home</a></li>
-				<li><a href="/#servicios" class="ancla">Servicios</a></li>
-				<li><a class="ancla" href="/#autos">Autos en venta</a></li>
-				<li><a class="ancla li-gest" href="/#gestoria">Gestoría</a></li>
-				<li><a class="ancla contacto-activo" href="/comentarios">Base de Comentarios</a></li>							
-			</ul>
-			</div>
-
-		</nav>
+	</header>
 	
 	<div class="container">
 
-
-
-			<form class="panel col-xs-12  col-md-6" method="post" action="newCar" enctype="multipart/form-data">
-					<h3>Agregar nuevo auto</h3>					
+			<form class="panel col-xs-12  col-md-8" method="post" action="newCar" enctype="multipart/form-data">
+					<h5>Agregar nuevo auto</h5>					
 					<div class="form-group">
 					
 						<div class="cols-sm-10">
@@ -101,6 +78,7 @@
 						</div>
 					</div>
 
+
 					<div class="form-group col-xs-4">
 						<label for="confirm" class="cols-sm-2 control-label">Kilometros</label>
 						<div class="cols-sm-10">
@@ -111,15 +89,25 @@
 					</div>
 
 					<div class="form-group col-xs-4">
-						<label for="confirm" class="cols-sm-2 control-label">Combustible</label>
-						<div class="cols-sm-10">
-									<select class="form-control" name="combustible">
+						<label for="confirm">Combustible</label>
+		
+									<select name="combustible">
 										<option>Nafta</option>
 										<option>Diesel</option>
 										<option>Gas</option>
 									</select>
-						</div>
+			
 					</div>
+
+				<script>
+					
+					$(document).ready(function() {
+					  $('select').material_select();
+					});
+				</script>
+
+		
+
 
 					<div class="form-group col-xs-4">
 						<label for="confirm" class="cols-sm-2 control-label">Color</label>
@@ -129,81 +117,98 @@
 							</div>
 						</div>
 					</div>
+					
+					<label for="equipamiento">Elegir Equipamiento</label>
+					<div class="equipamiento col-xs-12">
+						<div ng-repeat="x in equipamiento" class="col-xs-6">
+							<p>
+							   <input name="equipamiento" value="{{x}}" class="equipamiento" type="checkbox" id="{{test + $index}}" />
+							   <label for="{{test + $index}}">{{x}}</label>
+							 </p>	
+						</div>
+
+						<input type="button" class="btn btn-sm" ng-click="check()" value="AGREGAR EQUIPAMIENTO">
+
+					</div>
+
 					<div class="form-group">
-						<label for="confirm" class="cols-sm-2 control-label">Caracteristicas</label>
+						<label for="caracteristicas" class="cols-sm-2 control-label">Caracteristicas</label>
 						<div class="cols-sm-10">
-							<div class="form-group">
-								<textarea type="text" class="form-control" name="caracteristicas" id="caracteristicas"  placeholder="Agregar caracteristicas generales" ></textarea>
+							<div class="input-field">
+								<textarea type="text" class="materialize-textarea" name="caracteristicas" id="caracteristicas"  placeholder="Agregar caracteristicas generales" ></textarea>
 							</div>
 						</div>
 					</div>
 					<div class="form-group">
-						<label for="confirm" class="cols-sm-2 control-label">Comentarios</label>
+						<label for="comentarios" class="cols-sm-2 control-label">Comentarios</label>
 						<div class="cols-sm-10">
-							<div class="form-group">
-								<textarea type="text" class="form-control" name="comentarios" id="comentarios"  placeholder="Agregar comentario acerca el estado general del auto" ></textarea>
+							<div class="input-field">
+								<textarea type="text" class="materialize-textarea" name="comentarios" id="comentarios"  placeholder="Agregar comentario acerca el estado general del auto" ></textarea>
 							</div>
 						</div>
 					</div>
 
-					<div class="form-group">
-						<label for="image1">Subir imagenes</label>
-						<input multiple enctype="multipart/form-data" type="file" name="image1">
-
+					<div class="file-field input-field">
+					  <div class="btn">
+					    <span class="ion-images"></span>
+					    <input  multiple enctype="multipart/form-data" type="file" name="image1">
+					  </div>
+					  <div class="file-path-wrapper">
+					    <input class="file-path validate" type="text">
+					  </div>
 					</div>
 
-					<input type="submit" class="btn btn-success btn-lg btn-block login-button" value="Nuevo Auto">
+
+					<input type="submit" class="btn btn-lg btn-danger" value="Nuevo Auto">
 					
 				</form>
 
 
-	
+				<div class="col-xs-12 col-md-4 md-hidden">
+					<form class="col-xs-12 col-md-12" action="/eliminar" method="post">
+						<h5>Eliminar con patente</h5>
+						<div class="form-group">
+								<input type="text" class="form-control" name="patente"   placeholder="Nro de patente"/>
+						</div>
+						<input type="submit" class="btn btn-block btn-eliminar" value="ELIMINAR">
+					</form>
 
-			<div class="col-xs-12 col-md-3">
-				<form action="/eliminar" method="post">
-					<h3>Eliminar con patente</h3>
-					<div class="form-group">
-							<input type="text" class="form-control" name="patente"   placeholder="Nro de patente"/>
-					</div>
-					<input type="submit" class="btn btn-danger btn-lg btn-block login-button" value="Eliminar Auto">
-				</form>
-
-				<form action="/modificarEstado" method="post">
-					<h3>Cambiar precio de venta</h3>
-					<div class="form-group">
-							<input type="text" class="form-control" name="patente"   placeholder="Nro de patente"/>
-		
-					</div>
-					<div class="form-group">
-							<input type="number" class="form-control" name="precio"   placeholder="Modificar precio"/>
-					
-					</div>
-					
-
-					<input type="submit" class="btn btn-warning btn-lg btn-block login-button" value="Modificar">
-				</form>
+					<form class="col-xs-12 col-lg-12" action="/modificarEstado" method="post">
+						<h5>Cambiar precio de venta</h5>
+						<div class="form-group">
+								<input type="text" class="form-control" name="patente"   placeholder="Nro de patente"/>
 				
-			</div>
+						</div>
+						<div class="form-group">
+								<input type="number" class="form-control" name="precio"   placeholder="Modificar precio"/>
+						
+						</div>
+						
+
+						<input type="submit" class="btn btn-block btn-modificar" value="MODIFICAR">
+					</form>
+					
+				</div>
 
 
 
-			<div class="ultimosAutos col-sm-12 col-md-3">
-					<h3>ultimos agregados</h3>
-				<div class="ultimosItem" ng-repeat="auto in autos | orderBy:'time':true"">
-					<div class="media">
-					  <div class="media-left">
-	<!-- 				    <a href="#">
-					      <img class="media-object" src="{{'imagenes/autos/' + auto.imgUrl[0]}}" alt="{{auto.nombre}}">
-					    </a> -->
-					  </div>
-					  <div class="media-body">
-					    <h4 class="media-heading">{{auto.nombre}}</h4>
-					    <p>{{'patente:' + auto.patente}}</p>
-					    <p>{{'precio:' + auto.precio}}</p>
-					  </div>
-					</div>
+			<div class="ultimosAutos col-sm-12 col-md-4">
+				<label for="collection">Ultimos Autos</label>
+
+				<ul class="collection">
+				   <li ng-repeat="auto in autos | orderBy:'time':true" class="collection-item avatar">
+				     <img src="{{'http://res.cloudinary.com/dr8t3qbki/image/upload/h_0.1,w_0.1/' + auto.imgUrl[0].substring(0,6) + '-0.jpg'}}" alt="{{auto.nombre}}" alt="" class="circle">
+				     <span class="title">{{auto.nombre}}</span>
+				     <p>{{'patente:' + auto.patente}} <br>
+				        {{ auto.precio | currency:"$"}}
+				     </p>
+				   </li>
+				 </ul>
+
 
 				</div>
+
+
 
 			</div>
 

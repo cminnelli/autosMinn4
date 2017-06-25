@@ -99,35 +99,35 @@ body, html {
       font-size: 22px; } }
 
 /*SECCION HEADER*/
-header {
+header.index {
   background-attachment: fixed;
   background-image: url("../imagenes/headerimg3.jpg");
   height: 100%;
   background-size: cover; }
-  header .transparencia {
+  header.index .transparencia {
     background-color: rgba(100, 100, 151, 0.93);
     height: 100%;
     box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
     -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
     -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6); }
-  header h1 {
+  header.index h1 {
     transition: 2s;
     font-size: 20px;
     animation: 2s bounceInLeft;
     animation-delay: 0.09s;
     cursor: pointer; }
-    header h1:hover {
+    header.index h1:hover {
       transition: 1s;
       color: #a3e9a4; }
     @media screen and (max-width: 800px) {
-      header h1 {
+      header.index h1 {
         font-size: 12px; } }
-  header .minn {
+  header.index .minn {
     color: black;
     letter-spacing: 5px; }
-  header .ion-caret-down:visited {
+  header.index .ion-caret-down:visited {
     background-color: none; }
-  header #subtitulo {
+  header.index #subtitulo {
     animation: bounceInRight 2s;
     animation-delay: 0.1s;
     transition: 3s; }
@@ -141,7 +141,7 @@ header {
   font-size: 1.2em;
   width: 50px;
   height: 50px;
-  background: #2C393F;
+  background: #273547;
   bottom: 15px;
   right: 15px;
   bottom: 5%;
@@ -149,7 +149,7 @@ header {
   transform: translate(-50%, 0);
   z-index: 2; }
   .flecha:hover {
-    background: #9f2623;
+    background: #cc0000;
     transition: 0.5s; }
   .flecha a {
     position: absolute;
@@ -166,7 +166,7 @@ header {
   background-position: 100%; }
   .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
     padding: 5px;
-    background-color: rgba(100, 100, 151, 0.7); }
+    background-color: rgba(100, 100, 151, 0.93); }
     @media screen and (max-width: 1100px) {
       .seccion-estructura .transparencia, .servicios .transparencia, .gestoria .transparencia, .contacto .transparencia {
         height: auto; } }
@@ -176,7 +176,7 @@ header {
   padding: 10px;
   text-align: center;
   color: white;
-  background: #2C393F; }
+  background: #273547; }
   @media screen and (max-width: 1100px) {
     .servicios {
       height: auto; } }
@@ -231,7 +231,7 @@ header {
       padding: 10px;
       color: white;
       text-align: center;
-      background-color: #2C393F; }
+      background-color: #273547; }
 
 .seccion-estructura, .servicios, .gestoria, .contacto {
   background-repeat: no-repeat;
@@ -266,13 +266,13 @@ header {
     height: 100%; }
   .contacto .form-group {
     margin-bottom: 0; }
-  .contacto select, .contacto input, .contacto option, .contacto textarea, .contacto *::-webkit-input-placeholder, .contacto *::-webkit-input-select {
+  .contacto .input-field, .contacto select, .contacto input, .contacto option, .contacto textarea, .contacto *::-webkit-input-placeholder, .contacto *::-webkit-input-select {
     color: black;
     font-size: 13px;
-    margin-bottom: 0px;
-    padding: 0px; }
+    margin-top: 8px;
+    padding: 0px;
+    padding-bottom: 0px; }
   .contacto input {
-    margin-bottom: 1px;
     padding: 2px; }
   .contacto img {
     border-radius: 25px; }
@@ -291,9 +291,6 @@ header {
         font-weight: 700; }
       .contacto .transparencia .info-item h5 {
         font-size: 17px; }
-  .contacto .form-group {
-    padding: 0;
-    padding: 5px; }
 
 /*SECCION AUTOS*/
 .autos {
@@ -322,18 +319,19 @@ header {
         box-shadow: 0 10px 5px rgba(0, 0, 0, 0.15), 0 5px 8px rgba(0, 0, 0, 0.12);
         padding: 5px;
         background: whitesmoke;
-        border-bottom: 1.5px solid #36474e;
+        border-bottom: 1.5px solid #304157;
         border-radius: 5px; }
         .autos .autos-wrapper .autos-item article .auto-item-header {
           border-radius: 4px;
           padding: 7px;
           margin-bottom: 5px;
-          background: #36474e;
+          background: #304157;
           color: white;
           text-align: center;
           border-radius: 1.5px; }
           .autos .autos-wrapper .autos-item article .auto-item-header h3 {
-            color: whitesmoke;
+            color: #a4bbd7;
+            text-transform: uppercase;
             opacity: 0.5;
             padding: 10px;
             margin: 0;
@@ -344,6 +342,14 @@ header {
             margin: 0;
             font-size: 1em;
             font-weight: 700; }
+          .autos .autos-wrapper .autos-item article .auto-item-header:hover {
+            background-color: #a8bed9;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 1s; }
+            .autos .autos-wrapper .autos-item article .auto-item-header:hover h3 {
+              transition: 1s;
+              color: rgba(0, 0, 0, 0.7); }
         .autos .autos-wrapper .autos-item article .auto-item-des {
           padding: 5px;
           text-align: left;
@@ -355,14 +361,14 @@ header {
               transition: 0.5s;
               cursor: pointer; }
               .autos .autos-wrapper .autos-item article .auto-item-des .descri:hover p {
-                color: grey; }
+                color: #a4bbd7; }
             .autos .autos-wrapper .autos-item article .auto-item-des .descri p {
               color: #5D5D5D;
               padding: 5px;
               margin: 0;
               font-size: 1.08em; }
               .autos .autos-wrapper .autos-item article .auto-item-des .descri p span {
-                color: #2C393F; }
+                color: #273547; }
                 .autos .autos-wrapper .autos-item article .auto-item-des .descri p span.icon {
                   font-size: 1.3em;
                   padding: 5px; }
@@ -376,7 +382,6 @@ header {
           .autos .autos-wrapper .autos-item article .auto-item-img img:hover {
             background-color: none; }
 
-/*SECCION FOOTER*/
 /*BOOTSTRAP CHANGES*/
 /*BOTONES*/
 .btn-service {
@@ -387,8 +392,8 @@ header {
   border: 1px solid whitesmoke;
   transition: 1s; }
   .btn-service.color {
-    border: 1px solid #6c8a98;
-    color: #36474e;
+    border: 1px solid #607fa7;
+    color: #304157;
     margin: 5px 0px;
     padding: 4px 10px;
     background-color: whitesmoke;
@@ -399,65 +404,81 @@ header {
     transition: 2s;
     color: white; }
 
-#myModal .autos {
-  background-color: white;
-  box-shadow: none; }
 #myModal p {
   color: black; }
 #myModal img {
   padding: 17px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  margin-bottom: 6px; }
+  margin-bottom: 10px; }
   @media screen and (max-width: 800px) {
     #myModal img {
-      padding: 3px; } }
+      padding: 5px; } }
+#myModal .autos {
+  background-color: white;
+  box-shadow: none; }
 
 /*ADMIN */
-.admin #adminHeader {
-  height: auto;
-  background-position: 100%; }
+.admin {
+  height: auto; }
+  .admin .collection {
+    border: none;
+    height: 100vh;
+    overflow: scroll; }
+    .admin .collection li {
+      background-color: transparent;
+      border: none; }
+  .admin .equipamiento {
+    padding: 5px;
+    margin-bottom: 10px; }
+    .admin .equipamiento label {
+      font-weight: 300;
+      font-size: 14px; }
+    .admin .equipamiento input.btn {
+      margin: 12px 0; }
+  .admin .btn-eliminar {
+    background-color: crimson; }
+  .admin .btn-modificar {
+    background-color: orange; }
+  .admin .ultimosAutos span {
+    font-weight: 700;
+    line-height: 1px;
+    letter-spacing: 0.5px; }
+
 @media screen and (max-width: 1000px) {
-  .admin {
-    background-position: 100%; } }
-.admin *::-webkit-input-placeholder, .admin *::-webkit-input-select, .admin select {
+  background-position: 100%; }
+*::-webkit-input-placeholder, *::-webkit-input-select, select {
   color: rgba(0, 0, 0, 0.7);
-  font-size: 13px; }
-.admin .form-group {
+  font-size: 14px; }
+
+.form-group {
   padding-left: 0;
   margin-bottom: 8px; }
-.admin nav {
+
+nav {
   padding: 0px;
   margin: 0px; }
-.admin h3 {
-  color: whitesmoke; }
-.admin form {
+
+h3 {
+  color: #273547; }
+
+form {
   padding: 15px; }
-.admin .panel {
+
+.panel {
   margin-bottom: 0;
   background-color: transparent; }
-  .admin .panel label {
-    color: whitesmoke;
-    font-size: 15px;
-    letter-spacing: 1.5px; }
-.admin .ultimosAutos {
-  margin-top: 20px;
-  border-radius: 5px;
-  background-color: rgba(100, 100, 100, 0.3);
-  color: white;
-  overflow-y: scroll;
-  height: 600px; }
-  .admin .ultimosAutos img {
-    width: 50px; }
-  .admin .ultimosAutos .ultAuto-item {
-    border-bottom: 2px solid grey;
-    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22); }
+  .panel label {
+    padding: 2px;
+    color: #273547;
+    font-size: 13px;
+    letter-spacing: 1px; }
 
 #footer-wrapper {
   margin-top: 30px; }
   #footer-wrapper .copyright {
-    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
-    -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
-    -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.6);
+    box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
     height: 55%;
     background-color: #3F4448;
     color: whitesmoke;
@@ -487,6 +508,16 @@ header {
     #footer-wrapper .design-contact p {
       padding: 10px;
       margin-bottom: 0; }
+
+.login {
+  background-color: teal;
+  padding: 80px; }
+  .login span {
+    color: whitesmoke; }
+  .login input {
+    margin-top: 20px;
+    text-align: center;
+    letter-spacing: 1px; }
 
 /* estrella before y after*/
 .estrella::after {
