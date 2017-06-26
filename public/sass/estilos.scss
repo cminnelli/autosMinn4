@@ -30,7 +30,7 @@ $color-general:#273547;
 
 
 body,html{
-height:100%;
+height:auto;
 font-family:'Roboto', sans-serif;
 background-color:whitesmoke;
 box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
@@ -548,89 +548,29 @@ header.index{
 /*ADMIN */
 
 .admin{
-	@media screen and (max-width:100px){
-input{
-	disabled:false;
-}
-	}
-
-	background-color:rgba(0,0,0,0.7)
-	.ultimosAutos{
-		.collection{
-			border:none;
-			height: 400px;
-			overflow-y: scroll;
-			li{
-				background-color:transparent;
-				border:none;
-			}
-		}
-		
-	}
-	.equipamiento{
-		padding:5px;
-		margin-bottom:10px;
-
-		label{
-			font-weight: 300;
-			font-size:14px;
-		}
-		input.btn{
-			margin:12px 0;
-		}
-	}
-
-	.btn-eliminar{
-		background-color:crimson;
-	}
-
-	.btn-modificar{
-		background-color:orange;
-	}
-
-	.ultimosAutos{
-		span{
-			font-weight: 700;
-			line-height: 1px;
-			letter-spacing: 0.5px;
-		}
-	}
-
-	height: auto;
-	}
-	@media screen and (max-width:1000px){
-		background-position: 100%;
-	}
-	*::-webkit-input-placeholder , *::-webkit-input-select , select{
-	color:$color-titulos;
-	font-size:14px;
-	}
-	.form-group{
-		padding-left:0;
-		margin-bottom:8px;
-	}
-	nav{
-		padding:0px;
-		margin:0px;
-	}
-	h3{
-		color:$color-general;
-	}
-
-	form{
-		padding:15px;
-	}
-	.panel{
-
-		label{
-			padding:2px;
-			color:$color-general;
+	.nuevoAutoWrapper{
+		padding:0;
+		.equipamiento{
+			margin-bottom:15px;
+			display: block;
+			padding:20px;
 			font-size: 13px;
-			letter-spacing: 1px;
+			label{
+
+			font-weight: 400;
+			}
+	
 		}
-		margin-bottom:0;
-		background-color:transparent;
+		textarea{
+			margin-bottom: 2px;
+		}
+
 	}
+	.ultimoWrapper{
+
+
+	}
+}
 		
 
 

@@ -28,7 +28,7 @@ admin.service("adminService" ,  function(){
 admin.controller("adminController" , function($scope , $http, adminService){
 
 $scope.autos;
-$scope.equipamiento =  ["Airbag conductor" , "Airbag",  "Aire Acondicionado", "Cierre centralizado" , "Cierre con comando a distancia", "Cinturones Inerciales", "Climatizador automático", "Computadora de abordo" , "Control velocidad crucero"	 , "Dirección Asistida",  "Espejos exteriores eléctricos", "Faros antiniebla delanteros",  "Faros regulables", "Frenos ABS",  "Limpia/lavafaros", "Radio-CD" ,  "Radio-Pasacassette",  "Sistema de alarma",  "Tapizado de cuero",  "Techo corredizo",   "Volante regulable" , "Todos"]
+$scope.equipamiento =  ["Airbag",  "Aire Acondicionado", "Cierre centralizado" , "Cierre con comando a distancia", "Cinturones Inerciales", "Climatizador automático", "Computadora de abordo" , "Control velocidad crucero", "Dirección Asistida",  "Espejos exteriores eléctricos", "Faros antiniebla delanteros",  "Faros regulables", "Frenos ABS",  "Limpia/lavafaros", "Radio-CD" ,  "Radio-Pasacassette",  "Sistema de alarma",  "Tapizado de cuero",  "Techo corredizo",   "Volante regulable" , "Todos"]
 $scope.servicios =[{"nombre":"Venta de autos","descripcion":"Vendemos autos, que estan buenisimo","imgUrl":"/imagenes/icons/venta.png","referencia":"autos"},
 {"nombre":"Compra de autos","descripcion":"Compramos autos que tambien estan buenisimos","imgUrl":"/imagenes/icons/compra.png","referencia":"compra"},
 {"nombre":"Gestoria","descripcion":"Gestionamos la documentacion de tu auto, ya sea..","imgUrl":"/imagenes/icons/gestoria.png","referencia":"gestoria"}]

@@ -77,7 +77,7 @@ font-family: 'Roboto', sans-serif;
 
 /* CAMBIO DE ESTILOS EN CLASES PROPIAS*/
 body, html {
-  height: 100%;
+  height: auto;
   font-family: 'Roboto', sans-serif;
   background-color: whitesmoke;
   box-shadow: inset 0px 0px 120px rgba(0, 0, 0, 0.4);
@@ -418,65 +418,17 @@ header.index {
   box-shadow: none; }
 
 /*ADMIN */
-.admin {
-  height: auto; }
-  @media screen and (max-width: 100px) {
-    .admin input {
-      disabled: false; } }
-  .admin background-color:rgba(0,0,0,0.7)
-  .ultimosAutos .collection {
-    border: none;
-    height: 400px;
-    overflow-y: scroll; }
-    .admin background-color:rgba(0,0,0,0.7)
-    .ultimosAutos .collection li {
-      background-color: transparent;
-      border: none; }
-  .admin .equipamiento {
-    padding: 5px;
-    margin-bottom: 10px; }
-    .admin .equipamiento label {
-      font-weight: 300;
-      font-size: 14px; }
-    .admin .equipamiento input.btn {
-      margin: 12px 0; }
-  .admin .btn-eliminar {
-    background-color: crimson; }
-  .admin .btn-modificar {
-    background-color: orange; }
-  .admin .ultimosAutos span {
-    font-weight: 700;
-    line-height: 1px;
-    letter-spacing: 0.5px; }
-
-@media screen and (max-width: 1000px) {
-  background-position: 100%; }
-*::-webkit-input-placeholder, *::-webkit-input-select, select {
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 14px; }
-
-.form-group {
-  padding-left: 0;
-  margin-bottom: 8px; }
-
-nav {
-  padding: 0px;
-  margin: 0px; }
-
-h3 {
-  color: #273547; }
-
-form {
-  padding: 15px; }
-
-.panel {
-  margin-bottom: 0;
-  background-color: transparent; }
-  .panel label {
-    padding: 2px;
-    color: #273547;
-    font-size: 13px;
-    letter-spacing: 1px; }
+.admin .nuevoAutoWrapper {
+  padding: 0; }
+  .admin .nuevoAutoWrapper .equipamiento {
+    margin-bottom: 15px;
+    display: block;
+    padding: 20px;
+    font-size: 13px; }
+    .admin .nuevoAutoWrapper .equipamiento label {
+      font-weight: 400; }
+  .admin .nuevoAutoWrapper textarea {
+    margin-bottom: 2px; }
 
 #footer-wrapper {
   margin-top: 30px; }
