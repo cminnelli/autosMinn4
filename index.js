@@ -131,15 +131,17 @@ app.post("/newCar", upload.any(), function(req,res){
 })
 })
 
-app.post("/eliminar" , function(req , res){
-	var pat = req.body.patente;
+
+
+app.get("/eliminar/:id" , function(req , res){
+	var pat = req.params.id;
 	autos.remove({patente:pat}, function(err, response){
 		if (err){
 			throw err;
 		} else if (response === null){
 			res.send("No existe patente");
 		}else{
-			res.sendFile(path.join(__dirname , "myadmin.html"))
+			res.redirect("/admin")
 		}
 	})
 })
@@ -197,3 +199,5 @@ app.post("/modificarEstado" , function(req , res){
 			}
 		})
 	})
+
+

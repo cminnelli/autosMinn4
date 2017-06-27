@@ -35,8 +35,12 @@ $scope.servicios =[{"nombre":"Venta de autos","descripcion":"Vendemos autos, que
 
 
 $scope.check = function(){
-	adminService.checkBoxGet("equipamiento")
-	
+	adminService.checkBoxGet("equipamiento");
+}
+
+$scope.eraseCar = function(patente){
+	var pat =  patente;
+	window.location = "eliminar/" + pat;
 }
 $scope.getCars = function(){
 	var protocol = location.protocol;

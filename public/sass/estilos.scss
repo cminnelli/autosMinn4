@@ -30,7 +30,7 @@ $color-general:#273547;
 
 
 body,html{
-height:auto;
+height:100%;
 font-family:'Roboto', sans-serif;
 background-color:whitesmoke;
 box-shadow:inset 0px 0px 120px rgba(0,0,0,0.4);
@@ -304,6 +304,7 @@ header.index{
 	 }
 	 .form-group{
 	 	margin-bottom:0;
+	 	padding:0;
 	 }
 
 	.input-field , select,  input, option, textarea ,*::-webkit-input-placeholder , *::-webkit-input-select ,{
@@ -548,26 +549,102 @@ header.index{
 /*ADMIN */
 
 .admin{
+	header{
+		.page-header{
+
+		}
+		h1{
+			font-size: 30px;
+			color:$color-contact;
+			small{
+				color:$color-titulos;
+				font-size: 25px;
+				font-weight: 700;
+			}
+		}
+	}
+	padding:10px;
+	height:auto;
+	.active{
+		font-size: 15px;
+	}
+	.etiquetaLab{
+		font-size: 15px;
+		font-weight: 700;
+		color:$color-general;
+		padding:8px;
+	}
 	.nuevoAutoWrapper{
 		padding:0;
+		
 		.equipamiento{
 			margin-bottom:15px;
 			display: block;
 			padding:20px;
 			font-size: 13px;
 			label{
-
 			font-weight: 400;
+			}
+			#labelEquip{
+			display: block;
+			font-weight: 700;
+			}
+			.btn-equip{		
+				margin:10px;
 			}
 	
 		}
-		textarea{
-			margin-bottom: 2px;
+		.coment-obserWrapper{
+			padding:5px;
+			textarea{
+				padding-bottom: 10px;
+			}
+			
+		}
+		.newWrapper{
+
+		}
+		.submitBot{
+
 		}
 
 	}
-	.ultimoWrapper{
-
+	.ultimosWrapper{
+		.navBoot{
+			padding:15px;
+		}
+		.ultimosAutos{
+			.collection{
+				height: 500px;
+				overflow-y: scroll;
+				cursor:pointer;
+				li{
+					span.title{
+						font-weight: 700;
+					}
+					&:hover{
+						transition: 1s;
+						background-color:$color-contact;
+						color:$color-general;
+					}
+				}
+				
+			}
+			.trashIcon{
+				padding:5px;
+				font-size: 17px;
+				transition: 1s;
+				&:hover{
+					color:crimson;
+					font-size:18px;
+					cursor:pointer;
+					transition: 1s;
+				}
+			}
+		}
+		.options{
+			padding:20px;
+		}
 
 	}
 }
